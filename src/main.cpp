@@ -1,5 +1,7 @@
 #include <iostream>
+#include <print>
 #include <string>
+#include <vector>
 
 int main(int argc, const char * argv[])
 {
@@ -14,9 +16,9 @@ int main(int argc, const char * argv[])
         input = argv[1];
     }
     else{
-        std::cout << "정수 값을 입력하세요: ";
+        std::print("정수 값을 입력하세요: ");
         std::cin >> input;
-        std::cout << std::endl;
+        std::println("");
     }
 
     //input 값을 정수로 변환
@@ -33,11 +35,11 @@ int main(int argc, const char * argv[])
     }
 
     //약수들을 반복문을 통해 출력한다.
-    std::cout << std::format("{0}의 약수: ", num);
+    std::print("{0}의 약수: ", num);
     for(int i = 0; i < divisors.size(); i++){
-        std::cout << std::format("{0} ", divisors[i]);
+        std::print("{0} ", divisors[i]);
     }
-    std::cout << std::endl;
+    std::println("");
 
     return EXIT_SUCCESS;
 }
